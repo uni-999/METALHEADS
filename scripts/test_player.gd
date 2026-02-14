@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
-
+@onready var anim = $AnimationPlayer
 @export var lap_count = 0
 const SPEED = 300.0
+
+func _ready() -> void:
+	anim.play("Crawl")
 
 
 func _physics_process(delta: float) -> void:

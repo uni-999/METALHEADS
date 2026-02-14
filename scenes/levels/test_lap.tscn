@@ -66,6 +66,9 @@ default_color = Color(0.42745098, 0.31764707, 0.8156863, 1)
 [node name="Test Player" parent="Racers" unique_id=1227042769 groups=["Racers"] instance=ExtResource("2_ops6r")]
 position = Vector2(238, 86)
 
+[node name="Camera2D" type="Camera2D" parent="Racers/Test Player" unique_id=2144308355]
+zoom = Vector2(4, 4)
+
 [connection signal="body_entered" from="Checkpoints/Sector 1" to="." method="_on_sector_1_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Sector 2" to="." method="_on_sector_2_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Sector 3" to="." method="_on_sector_3_body_entered"]
