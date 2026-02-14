@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://evnuwv1hks4p"]
+[gd_scene format=3 uid="uid://evnuwv1hks4p"]
 
-[ext_resource type="Script" uid="uid://b4tdwxi1bh5x" path="res://scripts/test_player.gd" id="1_n5l6j"]
+[ext_resource type="Script" uid="uid://bubphk7yfb5cg" path="res://scripts/test_player.gd" id="1_n5l6j"]
 [ext_resource type="Texture2D" uid="uid://dfw4qxgfuy7bt" path="res://assets/sprites/mutant-toad-idle1.png" id="1_pyoba"]
 
-[node name="Test Player" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5l6j"]
+radius = 18.0
+
+[node name="Test Player" type="CharacterBody2D" unique_id=1300559042]
 script = ExtResource("1_n5l6j")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=999469044]
+position = Vector2(0, -32)
 texture = ExtResource("1_pyoba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523504136]
+position = Vector2(-1, -19)
+shape = SubResource("CircleShape2D_n5l6j")
