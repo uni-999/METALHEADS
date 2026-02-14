@@ -28,20 +28,22 @@ func _process(delta: float) -> void:
 
 func _on_sector_1_body_entered(body: Node2D) -> void:
 	print(body, ' has passed Sector 1')
-	if body in racers:
-		tracking[body.name][0] += 1
-	print(tracking[body.name])
+	var checks = tracking[body.name]
+	if body in racers and checks[0] == checks[1] and checks[0] == checks[2]:
+		checks[0] += 1
+	print(checks)
 
 func _on_sector_2_body_entered(body: Node2D) -> void:
 	print(body, ' has passed Sector 2')
-	if body in racers:
-		tracking[body.name][1] += 1
-	print(tracking[body.name])
+	var checks = tracking[body.name]
+	if body in racers and checks[0] > checks[1]:
+		checks[1] += 1
+	print(checks)
 
 func _on_sector_3_body_entered(body: Node2D) -> void:
 	print(body, ' has passed Sector 3')
 	var checks = tracking[body.name]
-	if body in racers:
+	if body in racers and checks[1] > checks[2] and checks[0] > checks[2]:
 		checks[2] += 1
 	print(checks)
 	if body.lap_count < checks.min():
