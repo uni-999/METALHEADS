@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cbrg0knlvoamh"]
+
+[ext_resource type="Script" uid="uid://bcdaqo2p83wrd" path="res://scripts/lap_logic.gd" id="1_uqnby"]
+[ext_resource type="PackedScene" uid="uid://evnuwv1hks4p" path="res://scenes/characters/test_player.tscn" id="2_ops6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xef1t"]
+size = Vector2(100, 20)
+
+[node name="Test Lap" type="Node2D" unique_id=1047577368]
+script = ExtResource("1_uqnby")
+
+[node name="Label" type="Label" parent="." unique_id=603594446]
+offset_right = 611.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 36
+text = "Lap time:"
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=1416742873]
+
+[node name="Checkpoint" type="Area2D" parent="Checkpoints" unique_id=1189957356]
+position = Vector2(464, 101)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint" unique_id=1026717351]
+shape = SubResource("RectangleShape2D_xef1t")
+debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
+
+[node name="Checkpoint2" type="Area2D" parent="Checkpoints" unique_id=1971067873]
+position = Vector2(248, 73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint2" unique_id=439306660]
+shape = SubResource("RectangleShape2D_xef1t")
+debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
+
+[node name="Checkpoint3" type="Area2D" parent="Checkpoints" unique_id=1503265653]
+position = Vector2(64, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint3" unique_id=1467441883]
+shape = SubResource("RectangleShape2D_xef1t")
+debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
+
+[node name="Checkpoint4" type="Area2D" parent="Checkpoints" unique_id=91418262]
+position = Vector2(293, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint4" unique_id=1431832062]
+shape = SubResource("RectangleShape2D_xef1t")
+debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
+
+[node name="Racers" type="Node2D" parent="." unique_id=1960448632]
+
+[node name="Test Player" parent="Racers" unique_id=1227042769 instance=ExtResource("2_ops6r")]
+position = Vector2(285, 262)
+
+[node name="Test Player2" parent="Racers" unique_id=578068281 instance=ExtResource("2_ops6r")]
+position = Vector2(243, 331)
+
+[node name="Test Player3" parent="Racers" unique_id=2117784803 instance=ExtResource("2_ops6r")]
+position = Vector2(489, 265)
+
+[node name="Test Player4" parent="Racers" unique_id=1876579992 instance=ExtResource("2_ops6r")]
+position = Vector2(162, 269)
