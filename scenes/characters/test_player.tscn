@@ -45,8 +45,6 @@ animations = [{
 [node name="Test Player" type="CharacterBody2D" unique_id=1300559042]
 motion_mode = 1
 script = ExtResource("1_n5l6j")
-MAX_SPEED = 200.0
-rotation_speed = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523504136]
 position = Vector2(0, -8)

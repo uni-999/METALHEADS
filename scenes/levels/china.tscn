@@ -242,7 +242,7 @@ z_index = 10
 
 [node name="Test Player" parent="Racers" unique_id=1227042769 groups=["Racers"] instance=ExtResource("2_ops6r")]
 position = Vector2(-169, 180)
-MAX_SPEED = 150.0
+MAX_SPEED = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="Racers/Test Player" unique_id=2144308355]
 position = Vector2(0, -32)
