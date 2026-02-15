@@ -24,7 +24,7 @@ offset_top = -30.0
 offset_right = 1155.0
 offset_bottom = 206.0
 theme_override_font_sizes/font_size = 64
-text = "Choose the track:"
+text = "Выберите трассу"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,25 +41,24 @@ theme_override_constants/v_separation = 35
 layout_mode = 2
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 50
-text = "Track 1"
+text = "Трасса №1"
 
 [node name="Button_Track2" type="Button" parent="GridContainer" unique_id=759210457]
 layout_mode = 2
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 50
-text = "Track 2"
+text = "Трасса №2"
 
 [node name="Button_Track3" type="Button" parent="GridContainer" unique_id=2067756322]
 layout_mode = 2
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 50
-text = "Track 3"
+text = "Трасса №3"
 
 [node name="Button_TrackRandom" type="Button" parent="GridContainer" unique_id=32524933]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Random
-"
+text = "Случайная"
 
 [node name="Button_Back" type="Button" parent="." unique_id=134180189]
 layout_mode = 0
@@ -68,10 +67,10 @@ offset_top = 20.0
 offset_right = 127.0
 offset_bottom = 83.0
 theme_override_font_sizes/font_size = 40
-text = "back"
+text = "Назад"
 
-[connection signal="pressed" from="GridContainer/Button_Track1" to="." method="_on_track_selected"]
-[connection signal="pressed" from="GridContainer/Button_Track2" to="." method="_on_track_selected"]
-[connection signal="pressed" from="GridContainer/Button_Track3" to="." method="_on_track_selected"]
+[connection signal="pressed" from="GridContainer/Button_Track1" to="." method="_on_button_track_1_pressed"]
+[connection signal="pressed" from="GridContainer/Button_Track2" to="." method="_on_button_track_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button_Track3" to="." method="_on_button_track_3_pressed"]
 [connection signal="pressed" from="GridContainer/Button_TrackRandom" to="." method="_on_track_selected"]
 [connection signal="pressed" from="Button_Back" to="." method="_on_back_pressed"]

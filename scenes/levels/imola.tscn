@@ -245,7 +245,7 @@ z_index = 10
 z_index = 10
 position = Vector2(988.0001, -316)
 rotation = -1.5707964
-MAX_SPEED = 150.0
+MAX_SPEED = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="Racers/Test Player" unique_id=2144308355]
 position = Vector2(0, -32)

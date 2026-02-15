@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
-@export var MAX_SPEED = 300.0
+@export var MAX_SPEED = 500.0
 @export var acceleration = 3.0
 @export var deceleration = 1.0
 @export var braking_deceleration = 2.0
-@export var rotation_speed = 3.0
+@export var rotation_speed = 2.0
 var lap_count = -1
 var speed = 0
 var movement_vector = Vector2(0, 0)

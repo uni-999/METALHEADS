@@ -20,7 +20,7 @@ func _ready() -> void:
 
 	for r in racers:
 		tracking.get_or_add(r.name, {"sectors": [0, 0, 0], "laptimes": [], "lapstart": Time.get_ticks_msec()})
-	print('Level loaded')
+	print(scene_file_path, ' loaded')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
