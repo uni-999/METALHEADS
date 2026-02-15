@@ -21,6 +21,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*uid://cp0uomxkimtvo"
+run/main_scene="uid://bn5jqqbru5ihx"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+window/size/borderless=true
 
 [input]
 

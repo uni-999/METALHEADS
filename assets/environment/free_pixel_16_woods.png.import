@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfw4qxgfuy7bt"
-path="res://.godot/imported/mutant-toad-idle1.png-0dbd7cacbbfec69e77d6c402ea78ad5a.ctex"
+uid="uid://sby1m3bi8km4"
+path="res://.godot/imported/free_pixel_16_woods.png-48857a8b88fc500a9e8a27e76cfd0451.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mutant-toad-idle1.png"
-dest_files=["res://.godot/imported/mutant-toad-idle1.png-0dbd7cacbbfec69e77d6c402ea78ad5a.ctex"]
+source_file="res://assets/environment/free_pixel_16_woods.png"
+dest_files=["res://.godot/imported/free_pixel_16_woods.png-48857a8b88fc500a9e8a27e76cfd0451.ctex"]
 
 [params]
 
