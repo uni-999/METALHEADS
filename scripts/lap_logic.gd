@@ -3,8 +3,8 @@ extends Node2D
 @onready var checkpoints_node = $Checkpoints
 @onready var racers_node = $Racers
 @onready var player = $"Racers/Test Player"
-@onready var laptime = $"Lap time"
-@onready var lapcount = $"Lap count"
+@onready var laptime = $"Racers/Test Player/Camera2D/Lap time"
+@onready var lapcount = $"Racers/Test Player/Camera2D/Lap count"
 
 var checkpoints: Array[Node] = []
 var racers: Array[Node] = []
