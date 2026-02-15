@@ -15,6 +15,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="SnakeRace"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*uid://cp0uomxkimtvo"
 run/main_scene="uid://bn5jqqbru5ihx"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"

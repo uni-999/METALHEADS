@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d3wrnkncksdpq"]
+
+[ext_resource type="Script" uid="uid://cf3lkdy5dc5k8" path="res://scripts/main_menu.gd" id="1_isws5"]
+
+[node name="MainMenu" type="Control" unique_id=1050216895]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_isws5")
+
+[node name="Background" type="ColorRect" parent="." unique_id=783268793]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.48235294, 0, 0.12941177, 1)
+
+[node name="GameTitle" type="Label" parent="." unique_id=1788703077]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 64
+text = "SNAKE of STEEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=66676381]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 161.0
+offset_right = 1153.0
+offset_bottom = 619.0
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Button_Start" type="Button" parent="ButtonContainer" unique_id=83236732]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="Button_Exit" type="Button" parent="ButtonContainer" unique_id=379039156]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="ButtonContainer/Button_Start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button_Exit" to="." method="_on_button_exit_pressed"]
