@@ -4,3 +4,4 @@
 
 [node name="menu_button_sound" type="AudioStreamPlayer" unique_id=796589561]
 stream = ExtResource("1_sgo4s")
+volume_db = -8.0
