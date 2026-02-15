@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="SnakeRace"
-run/main_scene="uid://c030rlrweh7y0"
+run/main_scene="uid://bn5jqqbru5ihx"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
