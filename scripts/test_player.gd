@@ -1,20 +1,35 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimationPlayer
-@export var lap_count = 0
-const SPEED = 300.0
+@export var MAX_SPEED = 300.0
+@export var acceleration = 10.0
+@export var deceleration = 5.0
+@export var braking_deceleration = 15.0
+@export var rotation_speed = 3.0
+var lap_count = 0
+var speed = 0
+var movement_vector = Vector2(0, 0)
+
 
 func _ready() -> void:
 	anim.play("Crawl")
 
 
 func _physics_process(delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	var left_and_right := Input.get_axis("move_left", "move_right")
+	var throttle = Input.get_axis("move_down", "move_up")
+	
+	if throttle > 0:
+		speed = move_toward(speed, MAX_SPEED, acceleration)
+	elif throttle < 0:
+		speed = move_toward(speed, 0, braking_deceleration)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		speed = move_toward(speed, 0, deceleration)
+	
+	if left_and_right:
+		rotate(rotation_speed * left_and_right * delta)
+	
+	movement_vector = Vector2(sin(rotation), -cos(rotation)).normalized()
+	velocity = movement_vector * speed
+	print(speed)
 	move_and_slide()

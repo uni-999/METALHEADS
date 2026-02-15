@@ -118,6 +118,9 @@ _data = {
 
 [node name="Test Player" type="CharacterBody2D" unique_id=1300559042]
 script = ExtResource("1_n5l6j")
+MAX_SPEED = 200.0
+deceleration = 3.0
+rotation_speed = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=999469044]
 position = Vector2(0, -8)
