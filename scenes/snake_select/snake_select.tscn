@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dvut8xej2qatf"]
+
+[ext_resource type="Script" uid="uid://bj6mf6b6oivpv" path="res://scripts/snake_select.gd" id="1_obwti"]
+
+[node name="SnakeSelect" type="Control" unique_id=609782944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_obwti")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2041249753]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+color = Color(0.48235294, 0, 0.12941177, 1)
+
+[node name="Label" type="Label" parent="." unique_id=654441310]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -30.0
+offset_right = 1155.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 64
+text = "Choose the snake:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=2136887521]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 197.0
+offset_right = 308.0
+offset_bottom = 610.0
+theme_override_constants/h_separation = 35
+theme_override_constants/v_separation = 35
+
+[node name="Button_Snake1" type="Button" parent="GridContainer" unique_id=1094061324]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 50
+text = "Snake 1"
+
+[node name="Button_Snake2" type="Button" parent="GridContainer" unique_id=759210457]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 50
+text = "Snake 2"
+
+[node name="Button_Snake3" type="Button" parent="GridContainer" unique_id=2067756322]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 50
+text = "Snake 3"
+
+[node name="Button_SnakeRandom" type="Button" parent="GridContainer" unique_id=32524933]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Random
+"
+
+[node name="Button_Back" type="Button" parent="." unique_id=134180189]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 20.0
+offset_right = 127.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 40
+text = "back"
