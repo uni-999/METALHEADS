@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bn5jqqbru5ihx"]
 
 [ext_resource type="Script" uid="uid://bcdaqo2p83wrd" path="res://scripts/lap_logic.gd" id="1_nw2vj"]
-[ext_resource type="PackedScene" uid="uid://evnuwv1hks4p" path="res://scenes/characters/test_player.tscn" id="2_5gq0x"]
+[ext_resource type="PackedScene" uid="uid://evnuwv1hks4p" path="res://scenes/characters/player.tscn" id="2_5gq0x"]
 [ext_resource type="Texture2D" uid="uid://c73bxauuq3mxv" path="res://assets/sprites/tiles/dirt.png" id="3_ipqk8"]
 [ext_resource type="Texture2D" uid="uid://ddxcgydg74nb8" path="res://assets/sprites/tiles/grass.png" id="4_s8nrt"]
 [ext_resource type="Texture2D" uid="uid://cc5sbdvcwie2j" path="res://assets/sprites/tiles/holelikegrassoverlay.png" id="5_cyld8"]
@@ -22,6 +22,9 @@ font_size = 108
 
 [sub_resource type="LabelSettings" id="LabelSettings_owf8a"]
 font_size = 108
+
+[sub_resource type="LabelSettings" id="LabelSettings_nw2vj"]
+font_size = 720
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vf0y"]
 texture = ExtResource("3_ipqk8")
@@ -207,11 +210,6 @@ rotation = 3.1387877
 shape = SubResource("RectangleShape2D_xef1t")
 debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
 
-[node name="Line2D" type="Line2D" parent="Checkpoints/Sector 1" unique_id=820425249]
-scale = Vector2(0.354, 1)
-points = PackedVector2Array(0, -25, 0, 25)
-default_color = Color(0.42745098, 0.31764707, 0.8156863, 1)
-
 [node name="Sector 2" type="Area2D" parent="Checkpoints" unique_id=1279977118 groups=["Checkpoints"]]
 position = Vector2(-109, 283)
 rotation = -0.8692143
@@ -219,11 +217,6 @@ rotation = -0.8692143
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Sector 2" unique_id=1500570487]
 shape = SubResource("RectangleShape2D_xef1t")
 debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
-
-[node name="Line2D" type="Line2D" parent="Checkpoints/Sector 2" unique_id=1889256511]
-scale = Vector2(0.354, 1)
-points = PackedVector2Array(0, -25, 0, 25)
-default_color = Color(0.42745098, 0.31764707, 0.8156863, 1)
 
 [node name="Sector 3" type="Area2D" parent="Checkpoints" unique_id=885053833 groups=["Checkpoints"]]
 position = Vector2(526, 149.00002)
@@ -233,26 +226,21 @@ rotation = -2.35689
 shape = SubResource("RectangleShape2D_xef1t")
 debug_color = Color(0.7075581, 0.26761124, 1, 0.41960785)
 
-[node name="Line2D" type="Line2D" parent="Checkpoints/Sector 3" unique_id=1565032787]
-scale = Vector2(0.354, 1)
-points = PackedVector2Array(0, -25, 0, 25)
-default_color = Color(0.42745098, 0.31764707, 0.8156863, 1)
-
 [node name="Racers" type="Node2D" parent="." unique_id=1960448632]
 z_index = 10
 
-[node name="Test Player" parent="Racers" unique_id=1227042769 groups=["Racers"] instance=ExtResource("2_5gq0x")]
+[node name="Player" parent="Racers" unique_id=1227042769 groups=["Racers"] instance=ExtResource("2_5gq0x")]
 z_index = 10
 position = Vector2(988.0001, -316)
 rotation = -1.5707964
-MAX_SPEED = 200.0
+MAX_SPEED = 150.0
 
-[node name="Camera2D" type="Camera2D" parent="Racers/Test Player" unique_id=2144308355]
+[node name="Camera2D" type="Camera2D" parent="Racers/Player" unique_id=2144308355]
 position = Vector2(0, -32)
 ignore_rotation = false
 zoom = Vector2(4, 4)
 
-[node name="Lap time" type="Label" parent="Racers/Test Player/Camera2D" unique_id=603594446]
+[node name="Lap time" type="Label" parent="Racers/Player/Camera2D" unique_id=603594446]
 offset_left = -144.0
 offset_top = -81.0
 offset_right = -84.0
@@ -261,7 +249,7 @@ scale = Vector2(0.08032575, 0.08032575)
 text = "Lap time:"
 label_settings = SubResource("LabelSettings_a3ijq")
 
-[node name="Lap count" type="Label" parent="Racers/Test Player/Camera2D" unique_id=739454443]
+[node name="Lap count" type="Label" parent="Racers/Player/Camera2D" unique_id=739454443]
 offset_left = -144.0
 offset_top = -66.0
 offset_right = 430.0
@@ -271,7 +259,7 @@ theme_override_font_sizes/font_size = 12
 text = "Lap count: "
 label_settings = SubResource("LabelSettings_3fyvy")
 
-[node name="Best lap" type="Label" parent="Racers/Test Player/Camera2D" unique_id=1303175685]
+[node name="Best lap" type="Label" parent="Racers/Player/Camera2D" unique_id=1303175685]
 offset_left = -144.0
 offset_top = -52.0
 offset_right = 331.0
@@ -280,7 +268,7 @@ scale = Vector2(0.07336612, 0.07336612)
 text = "Best lap: "
 label_settings = SubResource("LabelSettings_ol0rn")
 
-[node name="Label" type="Label" parent="Racers/Test Player/Camera2D" unique_id=537797256]
+[node name="Speed" type="Label" parent="Racers/Player/Camera2D" unique_id=537797256]
 offset_left = 80.0
 offset_top = 64.0
 offset_right = 392.0
@@ -288,6 +276,17 @@ offset_bottom = 212.0
 scale = Vector2(0.08681305, 0.08681305)
 text = "speed"
 label_settings = SubResource("LabelSettings_owf8a")
+
+[node name="Countdown" type="Label" parent="Racers/Player/Camera2D" unique_id=194051211]
+offset_left = -160.00858
+offset_top = -79.00012
+offset_right = 2337.5056
+offset_bottom = 901.9999
+scale = Vector2(0.12808667, 0.12808667)
+text = "5"
+label_settings = SubResource("LabelSettings_nw2vj")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TileMap" type="Node" parent="." unique_id=1034104188]
 
@@ -316,6 +315,13 @@ polygon = PackedVector2Array(-115, -213, -125, -166, -152, -147, -152, 11, -126,
 position = Vector2(352, 22)
 polygon = PackedVector2Array(-422, 28, -394, 41, -388, 92, -358, 108, -357, 221, -539, 402, -539, 418, -130, 417, -85, 384, -85, 340, -116, 321, -116, 140, 0, 34, 143, 39, 225, 129, 420, 127, 745, -194, 745, -236, 721, -253, 677, -302, 609, -302, 587, -274, 244, -272, 232, -303, 33, -300, 19, -269, -257, -270, -324, -200, -332, -159, -357, -135, -361, -94, -392, -70, -395, -31, -420, -5)
 
+[node name="Timers" type="Node" parent="." unique_id=2099598113]
+
+[node name="StartTimer" type="Timer" parent="Timers" unique_id=1622920478]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="Checkpoints/Sector 1" to="." method="_on_sector_1_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Sector 2" to="." method="_on_sector_2_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Sector 3" to="." method="_on_sector_3_body_entered"]
@@ -323,3 +329,4 @@ polygon = PackedVector2Array(-422, 28, -394, 41, -388, 92, -358, 108, -357, 221,
 [connection signal="body_exited" from="Slowdown Area" to="." method="_on_slowdown_area_body_exited"]
 [connection signal="body_entered" from="Slowdown Area2" to="." method="_on_slowdown_area_2_body_entered"]
 [connection signal="body_exited" from="Slowdown Area2" to="." method="_on_slowdown_area_2_body_exited"]
+[connection signal="timeout" from="Timers/StartTimer" to="." method="_on_start_timer_timeout"]

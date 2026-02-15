@@ -14,12 +14,17 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="SnakeRace"
+config/name="Max Snakestappen"
+config/name_localized={
+"ru_RU": "Макс Змейстаппен"
+}
+config/description="Игра с гонками в режиме Time Attack (гонка на время)"
 config/version="0.1"
 run/main_scene="uid://d3wrnkncksdpq"
 config/features=PackedStringArray("4.6", "Mobile")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="uid://0n5pnkpoby2n"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
@@ -27,6 +32,8 @@ run/main_scene="uid://d3wrnkncksdpq"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 BgmPlayer="*uid://vrtdojc8biui"
+GameStartSound="*uid://djrfkbj57qxsw"
+MenuButtonSound="*uid://qy2i817uxsp5"
 
 [display]
 
