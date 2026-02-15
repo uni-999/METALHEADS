@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://qy2i817uxsp5"]
+
+[ext_resource type="AudioStream" uid="uid://dj8di1mkujnui" path="res://assets/sounds/Cymatics - Collectibles Classic FX 8.wav" id="1_sgo4s"]
+
+[node name="menu_button_sound" type="AudioStreamPlayer" unique_id=796589561]
+stream = ExtResource("1_sgo4s")

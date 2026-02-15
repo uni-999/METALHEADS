@@ -42,7 +42,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Test Player" type="CharacterBody2D" unique_id=1300559042]
+[node name="Player" type="CharacterBody2D" unique_id=1300559042]
 motion_mode = 1
 script = ExtResource("1_n5l6j")
 

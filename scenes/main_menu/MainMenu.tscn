@@ -13,17 +13,17 @@ script = ExtResource("1_isws5")
 
 [node name="Background" type="ColorRect" parent="." unique_id=783268793]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.48235294, 0, 0.12941177, 1)
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.41568628, 0.74509805, 0.1882353, 1)
 
 [node name="GameTitle" type="Label" parent="." unique_id=1788703077]
 layout_mode = 0
-offset_top = 1.0
-offset_right = 1153.0
+offset_top = 60.0
+offset_right = 1280.0
 offset_bottom = 234.0
 theme_override_font_sizes/font_size = 64
-text = "SNAKE of STEEL"
+text = "МАКС ЗМЕЙСТАППЕН"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -31,7 +31,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = -1.0
 offset_top = 161.0
-offset_right = 1153.0
+offset_right = 1280.0
 offset_bottom = 619.0
 theme_override_constants/separation = 60
 alignment = 1
@@ -39,12 +39,12 @@ alignment = 1
 [node name="Button_Start" type="Button" parent="ButtonContainer" unique_id=83236732]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Start"
+text = "Старт"
 
 [node name="Button_Exit" type="Button" parent="ButtonContainer" unique_id=379039156]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Quit"
+text = "Выйти"
 
 [connection signal="pressed" from="ButtonContainer/Button_Start" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="ButtonContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

@@ -11,7 +11,7 @@ var speed = 0
 var movement_vector = Vector2(0, 0)
 var animation_speed = 0.0
 var dirt_speed_modifier = 0.2
-var speed_modifier = 1
+var speed_modifier = 0
 
 
 func _ready() -> void:
